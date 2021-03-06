@@ -15,6 +15,7 @@ const Mbox = ({ title, fetchURL, isLarge }) => {
     
     getdata();
     console.log(Movie);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchURL]);
 
   return (
