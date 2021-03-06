@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+@media (max-width: 768.98px) {
+  .nav__logo {
+    height: 4rem !important;
+    top: -5px !important;
+    left: -5px !important;
+  }
+  .nav__logo__avatar {
+    right: 25px !important;
+  }
+}
+
+.nav {
+  width: 100%;
+  height: 4rem;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  z-index: 1;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.nav__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__logo {
+  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-left: 15px;
+}
+
+.nav__logo__avatar {
+  height: 2rem;
+  position: fixed;
+  right: 30px;
+  cursor: pointer;
+  top: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #111 !important;
+}
+
+@media (max-width: 768.98px) {
+  .banner__contents {
+    left: .8rem !important;
+    bottom: 4.5rem !important;
+    line-height: 3.5rem !important;
+  }
+  .banner__title {
+    font-size: 2.3rem !important;
+  }
+  .banner__discription {
+    line-height: 1.4rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+.btn:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0 !important;
+          box-shadow: 0 0 0 0 !important;
+}
+
+.banner {
+  height: 35rem;
+  color: white;
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+.banner__contents {
+  position: absolute;
+  left: 2rem;
+  bottom: 5.5rem;
+  line-height: 5rem;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.banner__discription {
+  padding-top: 1rem;
+  max-width: 31rem;
+  line-height: 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  height: 6rem;
+}
+
+.banner__button {
+  padding: 0.6rem 1.8rem !important;
+  background-color: rgba(82, 79, 79, 0.527) !important;
+  outline: none;
+  text-align: center !important;
+  border: 0.5px solid rgba(245, 245, 245, 0.712) !important;
+  margin-right: 2rem;
+  letter-spacing: 2px;
+  color: white !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.banner__button:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  background-color: #c01212 !important;
+  outline: none !important;
+}
+
+.banner--fadebottom {
+  height: 9rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(63, 94, 251, 0)), to(#111));
+  background: linear-gradient(180deg, rgba(63, 94, 251, 0) 0%, #111 100%);
+}
+
+@media (max-width: 768.98px) {
+  #movie {
+    margin-left: .7rem !important;
+  }
+}
+
+#movie {
+  color: white;
+  margin-left: 2rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
+
+.movie__title {
+  padding-left: 1rem;
+}
+
+.movie__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1rem;
+}
+
+.movie__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.movie__poster {
+  max-height: 12rem;
+  margin-right: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.movie__poster:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.movie::-webkit-scrollbar {
+  overflow-x: hidden;
+}
+
+.movie__poster__large {
+  max-height: 20rem;
+}
+
+.movie__poster__large:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
+
+@media (min-width: 1199.98px) {
+  *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #85858569;
+  }
+  *::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(219, 219, 219, 0.404);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #cc0b0b;
+    border: 1px solid #550000;
+    border-radius: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

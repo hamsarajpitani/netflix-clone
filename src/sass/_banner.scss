@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+@media (max-width: 768.98px) {
+
+  .banner__contents {
+    left: .8rem !important;
+    bottom: 4.5rem !important;
+    line-height: 3.5rem !important;
+  }
+
+.banner {
+  &__title {
+    font-size: 2.3rem !important;
+  }
+
+  &__discription {
+    
+    line-height: 1.4rem !important;
+    font-size: 0.8rem !important;
+   
+  }
+
+}
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.banner {
+  height: 35rem;
+  color: white;
+  position: relative;
+  object-fit: contain;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+.banner__contents {
+  position: absolute;
+  left: 2rem;
+  bottom: 5.5rem;
+  line-height: 5rem;
+}
+
+.banner {
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  &__discription {
+    padding-top: 1rem;
+    max-width: 31rem;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    height: 6rem;
+  }
+
+  &__button {
+    padding: 0.6rem 1.8rem !important;
+    background-color: rgba(82, 79, 79, 0.527) !important;
+    outline: none;
+    text-align: center !important;
+    border: 0.5px solid rgba(245, 245, 245, 0.712) !important;
+    margin-right: 2rem;
+    letter-spacing: 2px;
+    color: white !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    border-radius: 2px;
+
+    &:hover{
+      transition: all 0.5s ease;
+      cursor: pointer;
+      background-color: rgb(192, 18, 18) !important;
+      outline: none !important;
+    }
+  }
+}
+
+.banner--fadebottom {
+  height: 9rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: 2;
+
+  background: linear-gradient(
+    180deg,
+    rgba(63, 94, 251, 0) 0%,
+    #111 100%
+  );
+}

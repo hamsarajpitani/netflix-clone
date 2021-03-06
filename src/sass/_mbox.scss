@@ -1,0 +1,56 @@
+@media (max-width: 768.98px) {
+  #movie {
+   
+    margin-left: .7rem !important;
+    
+  }
+  
+}
+#movie {
+  color: white;
+  margin-left: 2rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
+
+.movie {
+  &__title {
+    padding-left: 1rem;
+  }
+}
+.movie {
+  &__posters {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__poster {
+    max-height: 12rem;
+    margin-right: 1.5rem;
+    object-fit: contain;
+    transition: transform 450ms;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    overflow-x: hidden;
+  }
+}
+
+.movie__poster__large {
+  max-height: 20rem;
+
+  &:hover {
+    transform: scale(1.09);
+  }
+}
