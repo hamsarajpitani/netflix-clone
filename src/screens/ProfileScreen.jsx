@@ -1,8 +1,9 @@
 import React from "react";
-
+import user from "../features/userSlice";
 import Navbar from "../Navbar";
 
 const ProfileScreen = () => {
+  console.log("user is", user.email);
   return (
     <div className="profilescreen">
       <Navbar />
@@ -10,9 +11,8 @@ const ProfileScreen = () => {
         <div className="container">
           <div className="row">
             <div className="col-10 mx-auto">
-             
               <div className="row d-flex body__info mx-auto">
-              <h1 className="mb-3 fw-normal">Edit Profile</h1>
+                <h1 className="mb-3 fw-normal">Edit Profile</h1>
                 <div className="col-3">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
@@ -29,7 +29,9 @@ const ProfileScreen = () => {
                       <br />
                       1080p
                     </p>
-                    <button className="btn btn-danger body__plans__btn">Subscribe</button>
+                    <button className="btn btn-danger body__plans__btn">
+                      Subscribe
+                    </button>
                   </div>
 
                   <div className="body__plans d-flex justify-content-between align-items-center">
@@ -38,7 +40,9 @@ const ProfileScreen = () => {
                       <br />
                       480p
                     </p>
-                    <button className="btn btn-danger body__plans__btn">Subscribe</button>
+                    <button className="btn btn-danger body__plans__btn">
+                      Subscribe
+                    </button>
                   </div>
 
                   <div className="body__plans d-flex justify-content-between align-items-center">
@@ -47,9 +51,13 @@ const ProfileScreen = () => {
                       <br />
                       4k- HDR
                     </p>
-                    <button className="btn btn-danger  body__plans__btn__currentplan ">current plan</button>
+                    <button className="btn btn-danger  body__plans__btn__currentplan ">
+                      current plan
+                    </button>
                   </div>
-                  <button className="btn btn-danger body__plans__btn body__plans__btn__signout">Sign Out</button>
+                  <button className="btn btn-danger body__plans__btn body__plans__btn__signout">
+                    Sign Out
+                  </button>
                 </div>
               </div>
             </div>

@@ -39,7 +39,7 @@ function App() {
 
     //! goodto return
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
