@@ -1,12 +1,12 @@
 import React from "react";
-import Banner from "./Banner";
-import Navbar from "./Navbar";
-import requests from "./request";
-import Mbox from "./Mbox";
+import Banner from "../Banner";
+import Navbar from "../Navbar";
+import requests from "../request";
+import Mbox from "../Mbox";
 
 const HomeScreen = () => {
   return (
-    <div>
+    <div className='homescreen'>
       {/* navbar */}
       <Navbar />
       {/* Banner */}

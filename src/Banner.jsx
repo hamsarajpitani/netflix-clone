@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "./axios"; //!! local AXIOS .js FILE
 import request from "./request";
 
+
 const Banner = () => {
   function truncate(string, n) {
     return string?.length > n ? string.substring(0, n - 1) + "...." : string;
@@ -38,6 +39,7 @@ const Banner = () => {
           <button className="banner__button btn">play</button>
           <button className="banner__button btn">my list</button>
         </div>
+
         <h1 className="banner__discription">{truncate(Movie.overview, 160)}</h1>
       </div>
       <div className="banner--fadebottom" />

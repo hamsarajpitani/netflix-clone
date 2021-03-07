@@ -1,27 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
 
-@media (max-width: 768.98px) {
 
-  .banner__contents {
-    left: .8rem !important;
-    bottom: 4.5rem !important;
-    line-height: 3.5rem !important;
-  }
-
-.banner {
-  &__title {
-    font-size: 2.3rem !important;
-  }
-
-  &__discription {
-    
-    line-height: 1.4rem !important;
-    font-size: 0.8rem !important;
-   
-  }
-
-}
-}
 
 .btn:focus {
   outline: 0;
@@ -95,4 +74,28 @@
     rgba(63, 94, 251, 0) 0%,
     #111 100%
   );
+}
+
+
+@media (max-width: 768.98px) {
+
+  .banner__contents {
+    left: .8rem ;
+    bottom: 4.5rem ;
+    line-height: 3.5rem ;
+  }
+
+.banner {
+  &__title {
+    font-size: 2.3rem ;
+  }
+
+  &__discription {
+    
+    line-height: 1.4rem ;
+    font-size: 0.8rem ;
+   
+  }
+
+}
 }
