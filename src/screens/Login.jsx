@@ -30,7 +30,7 @@ const Login = () => {
                 <>
                 <h1 className="mb-4">Unlimited films,TV programmes and more.</h1>
                 <h4 className="mb-3">watch anywhere. cancel at any time.</h4>
-                <h6 className="mb-4">
+                <h6 className="mb-5">
                   Ready to watch ? Enter your email to create or restart your
                   membership.
                 </h6>

@@ -1,18 +1,19 @@
 import React from "react";
 import user from "../features/userSlice";
 import Navbar from "../Navbar";
+import {auth} from '../firebase';
 
 const ProfileScreen = () => {
   console.log("user is", user.email);
   return (
     <div className="profilescreen">
       <Navbar />
-      <div className="profilescreen__body mt-2">
-        <div className="container">
+      <div className="profilescreen__body pt-5">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-10 mx-auto">
+            <div className="col-12 mx-auto">
               <div className="row d-flex body__info mx-auto">
-                <h1 className="mb-3 fw-normal">Edit Profile</h1>
+                <h1 className="mb-3 fw-normal mt-4">Edit Profile</h1>
                 <div className="col-3">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
@@ -55,7 +56,9 @@ const ProfileScreen = () => {
                       current plan
                     </button>
                   </div>
-                  <button className="btn btn-danger body__plans__btn body__plans__btn__signout">
+                  <button 
+                  onClick={()=>auth.signOut()}
+                  className="btn btn-danger body__plans__btn body__plans__btn__signout">
                     Sign Out
                   </button>
                 </div>

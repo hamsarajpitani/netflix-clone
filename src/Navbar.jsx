@@ -27,7 +27,7 @@ const Navbar = () => {
   // },[])
 
   return (
-    <div className={`nav ${Show && "nav__black"} sticky-top`}>
+    <div className={`nav ${Show && "nav__black"}`}>
       <div className="nav__content d-flex justify-content-between">
         
         <img

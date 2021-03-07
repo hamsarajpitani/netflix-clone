@@ -298,6 +298,8 @@ body {
           transform: translate(-50%, -50%);
   margin: 1rem auto;
   font-weight: 900 !important;
+  min-width: 20rem;
+  padding: .1rem;
   text-align: center;
   text-transform: capitalize;
   z-index: 15;
