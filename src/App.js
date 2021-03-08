@@ -33,12 +33,13 @@ function App() {
       } else {
         //!! user is not LOGGED IN
         //* LOGOUT
-        dispatch(logout);
+        dispatch(logout());
       }
     });
 
     //! goodto return
     return unsubscribe;
+
   }, [dispatch]);
 
   return (

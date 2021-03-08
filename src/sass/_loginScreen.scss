@@ -75,11 +75,17 @@
  text-align: center;
  text-transform: capitalize;
  z-index: 15;
+  h1{
+    font-weight: 700 !important;
+    font-size: 2rem;
+  }
   h4{
       opacity: .9;
+      font-size: 1.1rem;
   }
   h6{
       opacity: .7;
+      font-size: .8rem;
   }
 
  &__input{
@@ -101,6 +107,8 @@
      button{
          border-radius: 5px !important;
          font-weight: 400;
+         background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+         background: linear-gradient(to right, #F45C43, #EB3349) !important;
         
      }
  }

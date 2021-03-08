@@ -40,7 +40,7 @@ const SignInScreen = () => {
   };
 
   return (
-    <div className="signinscreen">
+    <div className="signinscreen  my-auto mx-auto">
       <div class="signinscreen__card card" style={{ width: "21rem" }}>
         <h1 className="mb-3">Sign in</h1>
         <form>
@@ -53,6 +53,7 @@ const SignInScreen = () => {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              required
             />
           </div>
           <div class="form-group">
@@ -63,6 +64,7 @@ const SignInScreen = () => {
               class="form-control my-1 mb-4"
               id="exampleInputPassword1"
               placeholder="Password"
+              required
             />
           </div>
           <button type="submit" onClick={signin}  class="btn btn-danger mb-4">
