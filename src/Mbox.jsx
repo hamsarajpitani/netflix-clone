@@ -12,10 +12,10 @@ const Mbox = ({ title, fetchURL, isLarge }) => {
       });
       return;
     };
-    
+
     getdata();
-    console.log(Movie);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    console.log("MOVIE IS", Movie);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchURL]);
 
   return (
@@ -30,17 +30,22 @@ const Mbox = ({ title, fetchURL, isLarge }) => {
             //!! fix deadlink in case any image icon instead of actual image
             // (isLarge && movie.poster_path) ||
             // (!isLarge && movie.backdrop_path && (
+            <>
+              <img
+                className={`card-img-top movie__poster
+               ${isLarge && "movie__poster__large"}`}
+                key={movie.id}
+                src={`${baseUrl}${
+                  isLarge ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie.name}
+              />
 
-            <img
-              className={`card-img-top movie__poster ${
-                isLarge && "movie__poster__large"
-              }`}
-              key={movie.id}
-              src={`${baseUrl}${
-                isLarge ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.name}
-            />
+              {/* <h1 className="name">
+                {movie.title ? movie.title : movie.original_title}
+               
+              </h1> */}
+            </>
           );
         })}
       </div>

@@ -1,0 +1,52 @@
+SecretKey -
+
+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
+
+Test key -
+
+sk_test_51GyeEbEVqeovhuWguZId5lK81lgijQvZzdTJf45Ug5jo7pH0WHs8txbdm9Z9FGZG5a3aa25C5YhUlUOWLeONfk1i00QuiZ3U2i
+
+
+RULES -
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /${param:CUSTOMERS_COLLECTION}/{uid} {
+      allow read: if request.auth.uid == uid;
+
+      match /checkout_sessions/{id} {
+        allow read, write: if request.auth.uid == uid;
+      }
+      match /subscriptions/{id} {
+        allow read: if request.auth.uid == uid;
+      }
+    }
+
+    match /${param:PRODUCTS_COLLECTION}/{id} {
+      allow read: if true;
+
+      match /prices/{id} {
+        allow read: if true;
+      }
+      
+      match /tax_rates/{id} {
+        allow read: if true;
+      }
+    }
+  }
+}
+
+REPLACE
+
+1. match /${param:CUSTOMERS_COLLECTION}/{uid} 
+match /customers/{uid} 
+
+2. match /${param:PRODUCTS_COLLECTION}/{id} 
+match /products/{id}
+
+
+WEBHOOK SIGN IN SecretKey
+
+whsec_9TYzvX6tx8cwv1Rt6PW5fQpYHT7jTmyH
+
