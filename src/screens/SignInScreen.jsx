@@ -6,73 +6,83 @@ const SignInScreen = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  //!! register NEW USER 
+  //!! register NEW USER
 
   const register = (e) => {
     e.preventDefault();
 
-    auth.createUserWithEmailAndPassword(
-      emailRef.current.value,
-      passwordRef.current.value
-    ).then((authUser)=>{
-      console.log(authUser);
-    }).catch(err=>{
-      alert(err.message);
-    })
+    auth
+      .createUserWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
 
     console.log(emailRef.current.value, passwordRef);
-    alert("account succesfully Created")
+    alert("account succesfully Created");
   };
 
-  //!!  SIGNIN  USER 
+  //!!  SIGNIN  USER
   const signin = (e) => {
     e.preventDefault();
 
-    auth.signInWithEmailAndPassword(
+    auth
+      .signInWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
-      ).then((authUser)=>{
+      )
+      .then((authUser) => {
         console.log(authUser);
-      }).catch(err=>{
-        alert(err.message);
       })
-      alert("Signed In succesfully")
+      .catch((err) => {
+        alert(err.message);
+      });
+    alert("Signed In succesfully");
   };
 
   return (
     <div className="signinscreen  my-auto mx-auto">
-      <div class="signinscreen__card card" style={{ width: "21rem" }}>
+      <div className="signinscreen__card card" style={{ width: "21rem" }}>
         <h1 className="mb-3">Sign in</h1>
         <form>
-          <div class="form-group">
+          <div className="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input
               ref={emailRef}
               type="email"
-              class="form-control my-1 mb-4"
+              className="form-control my-1 mb-4"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
               required
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input
               ref={passwordRef}
               type="password"
-              class="form-control my-1 mb-4"
+              className="form-control my-1 mb-4"
               id="exampleInputPassword1"
               placeholder="Password"
               required
             />
           </div>
-          <button type="submit" onClick={signin}  class="btn btn-danger mb-4">
+          <button
+            type="submit"
+            onClick={signin}
+            className="btn btn-danger mb-4"
+          >
             Submit
           </button>{" "}
           <br />
           <p>new to Netflix ?</p>
-          <a href="" onClick={register} >
+          <a href="" onClick={register}>
             {" "}
             Sign up Now
           </a>

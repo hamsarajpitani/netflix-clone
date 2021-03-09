@@ -36,17 +36,17 @@ const Login = () => {
                 </h6>
                 <div className="login__body__input mt-4">
                   <form action="">
-                    <div class="input-group ">
+                    <div className="input-group ">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         placeholder="example@gmail.com"
                         aria-label="Recipient's username"
                         aria-describedby="button-addon2"
                         required
                       />
                       <button
-                        class="btn btn-danger"
+                        className="btn btn-danger"
                         type="button"
                         id="button-addon2"
                         onClick={()=>setSignIn(true)}

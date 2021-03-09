@@ -3,11 +3,12 @@ import Navbar from "../Navbar";
 import {auth} from '../firebase';
 import {selectUser} from '../features/userSlice';
 import { useSelector } from "react-redux";
+import PlansScreen from "./PlansScreen";
 
 const ProfileScreen = () => {
   
   const user = useSelector(selectUser);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="profilescreen">
@@ -28,38 +29,9 @@ const ProfileScreen = () => {
                   <p className="email">{user.uemail}</p>
                   <p className="plans">plans (Current plan : premium )</p>
                   <p className="renewal">renewal data : 04/03/2021</p>
-                  <div className="body__plans d-flex justify-content-between align-items-center">
-                    <p className="body__plans__type">
-                      netflix standard
-                      <br />
-                      1080p
-                    </p>
-                    <button className="btn btn-danger body__plans__btn">
-                      Subscribe
-                    </button>
-                  </div>
 
-                  <div className="body__plans d-flex justify-content-between align-items-center">
-                    <p className="body__plans__type">
-                      netflix basic
-                      <br />
-                      480p
-                    </p>
-                    <button className="btn btn-danger body__plans__btn">
-                      Subscribe
-                    </button>
-                  </div>
+                  <PlansScreen/>
 
-                  <div className="body__plans d-flex justify-content-between align-items-center">
-                    <p className="body__plans__type">
-                      netflix premium
-                      <br />
-                      4k- HDR
-                    </p>
-                    <button className="btn btn-danger  body__plans__btn__currentplan ">
-                      current plan
-                    </button>
-                  </div>
                   <button 
                   onClick={()=>auth.signOut()}
                   className="btn btn-danger body__plans__btn body__plans__btn__signout">
