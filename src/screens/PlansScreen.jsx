@@ -9,6 +9,7 @@ import { loadStripe } from "@stripe/stripe-js";
 const PlansScreen = () => {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
+  const [subscription, setSubscription] = useState(null);
 
   useEffect(() => {
     db.collection("products")
@@ -32,7 +33,34 @@ const PlansScreen = () => {
     return null;
   }, []);
 
+  //SUBSCRIPTION USE EFFECT
+  useEffect(() => {
+      //get customers data
+      db.collection('customers')
+      .doc(user.uid) //select user based on Id
+      .collection('subscriptions') //select subscription
+      .get()  //get IT
+      .then( querySnapshot =>{
+        querySnapshot.forEach( async subscription =>{
+          //set subscrition by looping in subscription data 
+          setSubscription({
+            role: subscription.data().role,
+            // googl seconds
+            current_period_start :subscription.data().current_period_start.seconds,
+            current_period_end : subscription.data().current_period_end.seconds,
+          })
+        })
+      })
+
+
+    return () => {
+      
+    }
+    //!! this depends of userid and dispatch
+  }, [user.uid]);
+
   console.log(products);
+  console.log("SUBSCRIPTION",subscription);
 
   const loadCheckout = async (priceId) => {
     const docRef = await db
@@ -69,7 +97,9 @@ const PlansScreen = () => {
   return (
     <>
       {Object.entries(products).map(([productId, productData]) => {
-        //TODO: add some logic to check if use os actie subscsription
+        //TODO: add some logic to check active subscsription
+
+        const isCurrentPackage = productData.name?.toLowerCase().includes(subscription?.role);
 
         return (
           <div className="body__plans d-flex justify-content-between align-items-center">
@@ -80,9 +110,9 @@ const PlansScreen = () => {
             </p>
             <button
               onClick={() => loadCheckout(productData.prices.priceId)}
-              className="btn btn-danger body__plans__btn"
+              className={`btn btn-danger ${!isCurrentPackage ? 'body__plans__btn' : 'body__plans__btn__currentplan'}`}
             >
-              Subscribe
+              {isCurrentPackage ? 'Current Plan' : 'Subscribe' }
             </button>
           </div>
         );
