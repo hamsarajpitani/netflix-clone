@@ -1,10 +1,7 @@
 @media (max-width: 768.98px) {
   #movie {
-   
-    margin-left: .7rem !important;
-    
+    margin-left: 0.7rem !important;
   }
-  
 }
 #movie {
   color: white;
@@ -12,39 +9,40 @@
   text-transform: capitalize;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
-  position: relative;
-
 }
 
+//********** MOVIE TITLE  ****************//
 .movie {
   &__title {
     padding-left: 1rem;
   }
 }
-.movie {
-  &__posters {
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding: 1rem;
-   
-    &::-webkit-scrollbar {
-      display: none;
-    }
+
+//********** MOVIE CARD ****************//
+
+.movie__posters__div {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1rem;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
+}
 
-  &__poster {
-    max-height: 12rem;
-    margin-right: 1.5rem;
-    object-fit: contain;
-    transition: transform 450ms;
-    
 
-    &:hover {
-      transform: scale(1.08);
-    }
 
-    
+.movie__poster__img {
+  max-height: 12rem;
+  margin-right: 1.5rem;
+  object-fit: contain;
+  transition: transform 450ms;
+  
+
+  &:hover {
+    transform: scale(1.08);
   }
 
   &::-webkit-scrollbar {
@@ -52,11 +50,58 @@
   }
 }
 
-.movie__poster__large {
+.movie__poster__img__large {
   max-height: 20rem;
 
   &:hover {
     transform: scale(1.09);
+  }
+}
+
+#relative {
+  position: relative;
+ 
+}
+
+#hover__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  
+  padding: 0 8px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+
+  h1 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    font-weight: bolder;
+  }
+
+  
+  .overview{
+    text-transform: capitalize;
+    font-weight: 500;
+    opacity: .5;
+    font-size: .8rem;
+    max-width: 15.5rem;
+  }
+  .vote {
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 3px;
+    border: 0.5px solid rgba(255, 255, 255, 0.514);
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }
 

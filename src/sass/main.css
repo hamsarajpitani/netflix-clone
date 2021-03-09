@@ -162,7 +162,7 @@ body {
 
 @media (max-width: 768.98px) {
   #movie {
-    margin-left: .7rem !important;
+    margin-left: 0.7rem !important;
   }
 }
 
@@ -172,27 +172,27 @@ body {
   text-transform: capitalize;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
-  position: relative;
 }
 
 .movie__title {
   padding-left: 1rem;
 }
 
-.movie__posters {
+.movie__posters__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   padding: 1rem;
+  position: relative;
 }
 
-.movie__posters::-webkit-scrollbar {
+.movie__posters__div::-webkit-scrollbar {
   display: none;
 }
 
-.movie__poster {
+.movie__poster__img {
   max-height: 12rem;
   margin-right: 1.5rem;
   -o-object-fit: contain;
@@ -203,22 +203,75 @@ body {
   transition: transform 450ms, -webkit-transform 450ms;
 }
 
-.movie__poster:hover {
+.movie__poster__img:hover {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
 }
 
-.movie::-webkit-scrollbar {
+.movie__poster__img::-webkit-scrollbar {
   overflow-x: hidden;
 }
 
-.movie__poster__large {
+.movie__poster__img__large {
   max-height: 20rem;
 }
 
-.movie__poster__large:hover {
+.movie__poster__img__large:hover {
   -webkit-transform: scale(1.09);
           transform: scale(1.09);
+}
+
+#relative {
+  position: relative;
+}
+
+#hover__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 0 8px;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#hover__info h1 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  text-orientation: upright;
+  font-weight: bolder;
+}
+
+#hover__info .overview {
+  text-transform: capitalize;
+  font-weight: 500;
+  opacity: .5;
+  font-size: .8rem;
+  max-width: 15.5rem;
+}
+
+#hover__info .vote {
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 3px;
+  border: 0.5px solid rgba(255, 255, 255, 0.514);
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 @media (min-width: 1199.98px) {
