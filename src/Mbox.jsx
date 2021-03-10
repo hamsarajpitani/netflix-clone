@@ -7,7 +7,7 @@ import axios from "./axios";
 const Mbox = ({ title, fetchURL, isLarge }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original/";
   const [Movie, setMovie] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
+  // const [trailerUrl, setTrailerUrl] = useState("");
 
   // //YOUTUBE TRAILER
   // const opts = {
@@ -69,7 +69,7 @@ const Mbox = ({ title, fetchURL, isLarge }) => {
               <div id="relative">
                 <img
                   id="img"
-                  onClick={() => handleclick(movie)}
+                  // onClick={() => handleclick(movie)}
                   className={`movie__poster__img
                ${isLarge && "movie__poster__img__large"}`}
                   key={movie.id}
