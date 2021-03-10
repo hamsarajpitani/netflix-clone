@@ -1,40 +1,40 @@
 /* eslint-disable no-mixed-operators */
 import React, { useState, useEffect } from "react";
 import axios from "./axios";
-import YouTube from "react-youtube";
-import movieTrailer from 'movie-trailer';
+// import YouTube from "react-youtube";
+// import movieTrailer from 'movie-trailer';
 
 const Mbox = ({ title, fetchURL, isLarge }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original/";
   const [Movie, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
-  //YOUTUBE TRAILER
-  const opts = {
-    height: "390",
-    width: "1100",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  };
+  // //YOUTUBE TRAILER
+  // const opts = {
+  //   height: "390",
+  //   width: "1100",
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //   },
+  // };
 
-  const handleclick = (movie) => {
-    if (trailerUrl) {
-      setTrailerUrl("");
-    } else {
-      movieTrailer(movie?.name || "")
-        .then((url) => {
-          //it gives full url
-          // Example - https://www.youtube.com/watch?v=4dKkcRtZ9ho
-          const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get("v")); //gives v=
-        })
-        .catch((err) => {
-          console.log(err.message);
-        }); //case some time name is undefiend
-    }
-  };
+  // const handleclick = (movie) => {
+  //   if (trailerUrl) {
+  //     setTrailerUrl("");
+  //   } else {
+  //     movieTrailer(movie?.name || "")
+  //       .then((url) => {
+  //         //it gives full url
+  //         // Example - https://www.youtube.com/watch?v=4dKkcRtZ9ho
+  //         const urlParams = new URLSearchParams(new URL(url).search);
+  //         setTrailerUrl(urlParams.get("v")); //gives v=
+  //       })
+  //       .catch((err) => {
+  //         console.log(err.message);
+  //       }); //case some time name is undefiend
+  //   }
+  // };
 
   /////////////////////////////
   function truncate(string, n) {
@@ -89,8 +89,8 @@ const Mbox = ({ title, fetchURL, isLarge }) => {
           );
         })}
       </div>
-
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+{/* 
+      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />} */}
     </div>
   );
 };
