@@ -1,7 +1,8 @@
 @media (max-width: 768.98px) {
   #movie {
-    margin-left: 0.7rem !important;
+    margin-left: 0.6rem !important;
   }
+  
 }
 #movie {
   color: white;
@@ -15,6 +16,7 @@
 .movie {
   &__title {
     padding-left: 1rem;
+    
   }
 }
 
@@ -30,16 +32,17 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+
+
 }
-
-
 
 .movie__poster__img {
   max-height: 12rem;
   margin-right: 1.5rem;
   object-fit: contain;
   transition: transform 450ms;
-  
+ 
 
   &:hover {
     transform: scale(1.08);
@@ -60,38 +63,58 @@
 
 #relative {
   position: relative;
- 
+  // background: -webkit-linear-gradient(transparent,rgba(0,0,0,.9));
+  // background: linear-gradient(transparent,rgba(0,0,0,.9));
 }
 
-#hover__info {
+.hover__info {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   width: 90%;
+
   
-  padding: 0 8px;
-  z-index: 10000;
+  padding: 8px;
+  padding-bottom: 20px;
+  z-index: 180000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  backdrop-filter: blur(1px);
+  cursor: pointer;
+ 
+  transition: all .5s;
   
 
+  // background-color: rgba(0, 0, 0, 0.6);
+  
+  color: #ffffff;
+
+  &:hover{
+    transform: translateY(-20px);
+    .overview{
+      display: block;
+
+    }
+  }
+
   h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: capitalize;
     writing-mode: horizontal-tb;
     text-orientation: upright;
     font-weight: bolder;
   }
 
-  
-  .overview{
+  .overview {
     text-transform: capitalize;
     font-weight: 500;
-    opacity: .5;
-    font-size: .8rem;
+    opacity: 1;
+    font-size: 0.65rem;
     max-width: 15.5rem;
+    display: block;
   }
+
   .vote {
     font-size: 0.8rem;
     background-color: rgba(0, 0, 0, 0.55);
@@ -101,7 +124,7 @@
     text-align: center;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
   }
-}
 
+}

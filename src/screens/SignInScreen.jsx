@@ -78,13 +78,13 @@ const SignInScreen = () => {
             onClick={signin}
             className="btn btn-danger mb-4"
           >
-            Submit
+            Sign in
           </button>{" "}
           <br />
           <p>new to Netflix ?</p>
           <a href="" onClick={register}>
             {" "}
-            Sign up Now
+            Create New Account
           </a>
         </form>
       </div>

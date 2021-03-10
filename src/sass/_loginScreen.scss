@@ -6,8 +6,9 @@
   font-family: "Roboto", sans-serif !important;
 //   font-family: 'Josefin Sans', sans-serif!important;
 // font-family: 'Poppins', sans-serif!important;
-  background-image: url("https://www.numerama.com/wp-content/uploads/2017/05/netflix.jpeg");
+  background-image: url('https://juegodedragones.xyz/wp-content/uploads/2020/07/jdd-series.jpg');
   background-image: 100% 100%;
+  object-fit: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -77,15 +78,15 @@
  z-index: 15;
   h1{
     font-weight: 700 !important;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   h4{
       opacity: .9;
-      font-size: 1.1rem;
+      font-size: 1.55rem;
   }
   h6{
       opacity: .7;
-      font-size: .8rem;
+      font-size: .7rem;
   }
 
  &__input{
@@ -112,4 +113,22 @@
         
      }
  }
+}
+
+@media (max-width:768px){
+  .login__body{
+    
+  h1{
+    font-weight: 700 !important;
+    font-size: 1.8rem;
+  }
+  h4{
+      opacity: .9;
+      font-size: 1rem;
+  }
+  h6{
+      opacity: .7;
+      font-size: .7rem;
+  }
+}
 }
