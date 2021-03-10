@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta2",
+    "fetch": "^1.1.0",
     "firebase": "^8.2.10",
     "movie-trailer": "^2.0.5",
     "react": "^17.0.1",
