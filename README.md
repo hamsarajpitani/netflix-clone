@@ -1,8 +1,13 @@
+![netflix1](https://user-images.githubusercontent.com/33552374/110739213-bc20da00-8256-11eb-92d4-ec9a2e96ba26.png)
+![netflix1](https://user-images.githubusercontent.com/33552374/110739467-41a48a00-8257-11eb-97b1-ed4dd04363f4.png)
 ![netflix5](https://user-images.githubusercontent.com/33552374/110739203-b88d5300-8256-11eb-8bde-f2e0b951bb2c.png)
-![netflix4](https://user-images.githubusercontent.com/33552374/110739209-ba571680-8256-11eb-8fa1-46ee7f23ca3b.png)
 ![netflix3](https://user-images.githubusercontent.com/33552374/110739210-bb884380-8256-11eb-86ae-f61cdbc06382.png)
 ![netflix2](https://user-images.githubusercontent.com/33552374/110739212-bb884380-8256-11eb-8b59-d733d2ece5dd.png)
-![netflix1](https://user-images.githubusercontent.com/33552374/110739213-bc20da00-8256-11eb-92d4-ec9a2e96ba26.png)
+![netflix4](https://user-images.githubusercontent.com/33552374/110739209-ba571680-8256-11eb-8fa1-46ee7f23ca3b.png)
+
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
