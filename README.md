@@ -6,7 +6,11 @@
 ![netflix4](https://user-images.githubusercontent.com/33552374/110739209-ba571680-8256-11eb-8fa1-46ee7f23ca3b.png)
 
 
-
+## CREATE ACCOUNT
+ enter email and password and click on create new account your account will be created
+ 
+## CARD PAYMENT TEST DETAILS
+ Type 42424242 in every box in card details section
 
 
 
